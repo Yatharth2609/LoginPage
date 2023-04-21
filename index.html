@@ -7,12 +7,27 @@
   <link rel="stylesheet" href="styles.css">
   <title>Code-N-Hunt 2.0</title>
 </head>
+
+
+<script>
+  var sites = [
+  "https://yatharth2609.github.io/Ninad_1/",
+  "https://yatharth2609.github.io/Ninad_2/",
+  "https://yatharth2609.github.io/Ninad_3/"
+  ];
+
+  function randomSite() {
+      var i = parseInt(Math.random() * sites.length);
+      location.href = sites[i];
+  }
+</script>
+
 <body>
     <video autoplay muted loop id="myVideo">
         <source src="Vid2.mp4" type="video/mp4">
     </video>
     <div class="login-wrapper">
-      <form action= "Riddle Page/riddles.html" class="form" method="post" name="form" onsubmit="return myFunction()">
+      <form action= "Submit" class="form" method="post" name="form" onsubmit="return myFunction()">
         <h2>Login</h2>
         <div class="input-group">
           <input placeholder="Please Enter Your Team Name" type="text" name="loginUser" id="loginUser" autocomplete="off" required>
@@ -22,7 +37,7 @@
           <input placeholder="Please Enter Your Team Id"  type="password" name="loginPassword" id="loginPassword" required>
           <label for="loginPassword">Team Id</label>
         </div>
-        <input action = "Riddle Page\riddles.html" type="submit" value="Login" class="submit-btn">
+        <a style="color: wheat;border: 2px solid  #ff652f;padding: 5px;border-radius: 5px;" href="#" onclick="randomSite()">Login</a>
       </form>
       
     <!-- <div id="forgot-pw">
